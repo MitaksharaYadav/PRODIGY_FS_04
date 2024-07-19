@@ -1,0 +1,110 @@
+/* Color Variables */
+:root {
+    --sand-tan: #e1b382;
+    --sand-tan-shadow: #c89666;
+    --night-blue: #2d545e;
+    --night-blue-shadow: #12343b;
+}
+
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--night-blue);
+}
+
+/* Centering Container */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative; /* For proper positioning of the background GIF */
+    z-index: 1; /* Ensure content is above the background GIF */
+    background-color: var(--night-blue-shadow);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Background GIF */
+.background-gif {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('background.gif') no-repeat center center fixed;
+    background-size: cover;
+    z-index: -1; /* Place the GIF behind content */
+}
+
+/* Header */
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--sand-tan);
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+/* Card Styles */
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: var(--night-blue-shadow);
+    margin-bottom: 1.5rem;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+/* Create Post Form */
+textarea {
+    resize: none;
+    border-radius: 5px;
+    border: 1px solid var(--sand-tan-shadow);
+    background-color: var(--night-blue);
+    color: #fff;
+}
+
+.btn-primary {
+    background-color: var(--sand-tan);
+    border: none;
+    color: var(--night-blue);
+}
+
+.btn-primary:hover {
+    background-color: var(--sand-tan-shadow);
+    color: var(--night-blue);
+}
+
+/* Posts List */
+ul {
+    padding: 0;
+}
+
+ul li {
+    background: var(--night-blue);
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+}
